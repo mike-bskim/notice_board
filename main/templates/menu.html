@@ -1,0 +1,12 @@
+{% if session.get("id") is not none or session.get("id") == "None" %}
+    <label for="">{{session.get("name")}}&nbsp;|&nbsp;{{session.get("email")}}&nbsp;|&nbsp;</label>
+    <a href="{{url_for('member.member_logout')}}">Log-out</a>
+    &nbsp;|&nbsp;
+    <a href="{{url_for('board.lists')}}">Board</a>
+    &nbsp;|&nbsp;
+    <a href="{{url_for('naver.naverList')}}">Trendy</a>
+{% else %}
+    <a href="{{url_for('member.member_login')}}">Log-in</a>
+    &nbsp;|&nbsp;
+    <a href="{{url_for('member.member_join')}}">Join</a>
+{% endif %}

@@ -1,0 +1,190 @@
+{% extends "main.html" %}
+
+{% block contents %}
+<script>
+    //function searching() {
+    //    var v_keyword = document.getElementById("skeyword").value;
+    //    if( v_keyword != "" ) {
+    //        self.location.href = "{{url_for('naver.getBlogs')}}?keyword=" + v_keyword;
+    //    }
+    //}
+
+    function insert_keyword(keyword) {
+        document.getElementById("skeyword").value = keyword
+    }
+
+    function priceToComma(price) {
+        return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    }    
+    function searchingAll() {
+        var v_keyword = document.getElementById("skeyword").value;
+        if(v_keyword.trim() != ""){
+            $("#resultKeyword").html('');
+            $("#resultBlogs").html('');
+            $("#resultShops").html('');
+
+            searchingBlogs();
+            searchingShops();
+            searchingKeyword();
+        }
+        else {
+            console.log('키워드없음')
+            document.getElementById("skeyword").value = "";
+        }
+    }
+
+    function searchingBlogs() {
+        var v_keyword = document.getElementById("skeyword").value;
+
+        $.ajax({
+            url: "{{url_for('naver.getBlogs')}}?keyword="+"'"+v_keyword+"'",
+            type: "GET",
+            data: false,
+            success: function(data) {
+
+                html = "";
+                html += "<table class='table'>"
+                html += "<tr>"
+                html += "<td width='100'><b>" + "인기 블로그 리스트" + "</b></td>";
+                html += "</tr>";
+                for(var i = 0; i < data.length; i++){
+                    html += "<tr>"
+                    html += "<td width='100'><a href="+data[i].link+" target='_blank'>" + data[i].title + "</td>";
+                    html += "</tr>";
+                }
+                html += "</table>";                    
+                html += "<hr style='border-top: 3px solid #000;' class='solid'>";
+                $("#resultBlogs").html(html);
+
+            },
+            error: function(equest, status, error) {
+                var msg = "Error" + reques.status + "<br>";
+                msg += "내용" + reques.responseText + "<br>" + error;
+                console.log(msg);
+            }
+        })
+    }
+
+    function searchingShops() {
+        var v_keyword = document.getElementById("skeyword").value;
+
+        $.ajax({
+            url: "{{url_for('naver.getShops')}}?keyword="+"'"+v_keyword+"'",
+            type: "GET",
+            data: false,
+            success: function(data) {
+
+                html = "";
+                html += "<table class='table'>"
+                html += "<tr>"
+                html += "<td width='100'><b>" + "인기 상점 리스트" + "</b></td>";
+                html += "</tr>";
+                for(var i = 0; i < data.length; i++){
+                    html += "<tr>"
+                    html += "<td width='100'><a href="+data[i].link+" target='_blank'>" + data[i].title + "</td>";
+                    html += "</tr>";
+                }
+                html += "</table>";                    
+                html += "<hr style='border-top: 3px solid #000;' class='solid'>";
+                $("#resultShops").html(html);
+
+            },
+            error: function(equest, status, error) {
+                var msg = "Error" + reques.status + "<br>";
+                msg += "내용" + reques.responseText + "<br>" + error;
+                console.log(msg);
+            }
+        })
+    }    
+
+    function searchingKeyword() {
+        var v_keyword = document.getElementById("skeyword").value;
+        v_keyword = v_keyword.replace(/ /g,"");
+
+        $.ajax({
+            url: "{{url_for('naver.relatedKeywords')}}?keyword=" + v_keyword,
+            type: "GET",
+            data: false,
+            success: function(data) {
+                html = "";
+                html += "<div>"
+                html += "<table class='table'>";
+                html += "<thead>"
+                html += "<tr>"
+                html += "<th colspan=5><b>" + "연관 검색어 리스트" + "</b></th>";
+                html += "</tr>";
+                html += "<tr>"
+                //html += "<th>" + '번호' + "</th>";
+                html += "<th style='width:20%;'>" + '키워드' + "</th>";
+                html += "<th style='width:20%;'>" + '검색횟 수' + "</th>";
+                html += "<th style='width:20%;'>" + '클릭율 (CTR)' + "</th>";
+                html += "<th style='width:20%;'>" + '블로그 수' + "</th>";
+                html += "<th style='width:20%;'>" + '쇼핑몰 수' + "</th>";
+                html += "</tr>";
+                html += "</thead>"
+                html += "<tbody>"
+                    for(var i = 0; i < data.length; i++){
+                    html += "<tr>"
+                    //html += "<td>" + i + "</td>";
+                    html += "<td><input type=\'button\' value=" + data[i].word + " onclick=\"insert_keyword(\'" + data[i].word + "\')\" class=\'btn btn-round_circle\' \/></td>";
+                    html += "<td style='text-align: right;'>" + priceToComma(data[i].totalCnt) + "</td>";
+                    html += "<td style='text-align: center;'>" + data[i].clickCnt + "</td>";
+                    html += "<td style='text-align: right;'>" + priceToComma(data[i].blogsTotal) + "</td>";
+                    html += "<td style='text-align: right;'>" + priceToComma(data[i].shopsTotal) + "</td>";
+                    html += "</tr>";
+                }
+                html += "<tbody>"
+                html += "</table>";
+                html += "</div>"
+                html += "<hr style='border-top: 3px solid #000;' class='solid'>";
+                $("#resultKeyword").html(html);
+            },
+            error: function(equest, status, error) {
+                var msg = "Error" + reques.status + "<br>";
+                msg += "내용" + reques.responseText + "<br>" + error;
+                console.log(msg);
+            }
+        })
+    }
+    
+</script>
+
+<br>
+<br>
+<form id="search" name="search" method="GET" >
+    <!-- <input type="hidden" name="csrf_token" value="{{csrf_token()}}"> -->
+    <table class="table">
+        <thead>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="width: 100px;"><label for="name">검색어 : </label></td>
+                <td><input class="form-control" type="text" name="keyword" id="skeyword"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <center>
+                        <input type="button" value="검색" onclick="searchingAll();" class="btn btn-primary btn-sm" />
+                    </center>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+
+<hr style="border-top: 3px solid #000;" class="solid">
+<div>
+    {% for data in (datas) %}
+    <tr>
+        <input type="button" value="{{data.name}}" onclick="insert_keyword('{{data.name}}')" class="btn btn-round_circle" />
+    </tr>
+    {% endfor %}
+</div>
+<hr style="border-top: 3px solid #000;" class="solid">
+
+<div id="resultKeyword"></div>
+<div id="resultBlogs"></div>
+<div id="resultShops"></div>
+
+
+{% endblock %}

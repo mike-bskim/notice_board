@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+
+    <!-- Bootstrap core CSS / 내부처리 샘플-->
+    <!-- <link href="/static/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- JQuery 내부처리 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+    <script src="{{url_for('static', filename='jquery-3.5.1.js')}}"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- include summernote css/js -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script> -->
+    <link href="{{url_for('static', filename='summernote-0.8.18-dist/summernote.min.css')}}" rel="stylesheet">
+    <script src="{{url_for('static', filename='summernote-0.8.18-dist/summernote.min.js')}}"></script>
+
+    <!-- 개인적으로 필요한 CSS 모음 -->
+    <link rel="stylesheet" href="{{url_for('static', filename='run.css')}}">
+
+    {# flash 로 호출된 내용이 여기서 출력되게 됩니다. #}
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <script>
+            alert("{{ messages[-1] }}");
+        </script>
+    {% endif %}
+    {% endwith %}
+    <script>
+        function validateEmail(email) {
+            var re = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+            /*
+            ^ : 첫번째 매칭되어야 함
+            [0-9a-zA-Z] : 숫자, 알파벳대소문자
+            [-_.] ? [0-9a-zA-Z] : - 혹은 _ 혹은 . 문자가 0개 이상 이고 뒤에 알파벳이 나와야 함
+            ( ) 위의 한 문자가 
+            * 여러번 반복
+            @ 문자가 있어야 하고
+            [0-9a-zA-Z] 문자로 시작
+            [-_.]?[0-9a-zA-Z] : - 혹은 _ 혹은 . 문자가 0개 이상ㅇ이고 뒤에 알파벳
+            ( ) 위의 문자가
+            * 여러번 반복
+            . : .이 나와야 하고
+            [a-zA-Z] : 알파벳이고
+            {2, 3}$ : 2글자 혹은 3글자로 끝나는 패턴
+            i : 대소문자 구분 안함
+            */
+            return re.test(email);
+        }
+    </script>    
+    <style type="text/css"> 
+        .btn-round_circle { 
+            width: auto;
+            height: 34px; 
+            padding: 5px 8px; 
+            border-radius: 30px; 
+            font-size: 14px; 
+            text-align: center; 
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% include "menu.html" %}
+        <br>
+        {% block contents %}
+        {% endblock %}
+    </div>
+</body>
+</html>

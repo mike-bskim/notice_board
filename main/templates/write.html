@@ -1,0 +1,117 @@
+{% extends "main.html" %}
+
+{% block contents %}
+<script>
+    $(document).ready(function () {
+        
+        //console.log("(document).ready(function ()");
+
+        // 옵션주는 방법.
+        $("#summernote").summernote({
+            height: 300,
+            minHeight: null,
+            maxHeight: null,
+            lang: "ko-KR",
+            popover: { // 충돌이 생겨서 3개의 레이어를 제거함
+                image: [],
+                link: [],
+                air:[]
+            },
+            callbacks: {
+                onImageUpload: function(image) {
+                    for(var i = 0; i < image.length; i++) {
+                        console.log("Event: onImageUpLoad: ", i);
+                        uploadImage(image[i]);
+                    }
+                }
+            }
+        });
+    });
+
+    function uploadImage(image) { // 강좌 15분 전후.
+        
+        //console.log(image);
+        var data = new FormData();
+        data.append("image", image);
+        var csrf_token = "{{csrf_token()}}"
+        $.ajaxSetup({
+            beforeSend: function(x, s) {
+                if(!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(s.type)) {
+                    x.setRequestHeader("X-CSRFToken", csrf_token)
+                }
+            }
+        });
+
+        $.ajax({ // 기본 POST 방삭임.
+            url: "{{url_for('board.upload_image')}}",
+            cache: false,
+            contentType: false, // false: multipart/form-data(파일전송시필수), true: x-www-form-urlencoded
+            processData: false, // true: a=10&b=20 등, 쿼리스트링.
+            data: data,
+            type: "POST",
+            success: function(url) {
+                console.log('url: ', url)
+                if(url != "/board/images/error"){
+                    var image = $("<img>").attr("src", url).css('max-width', '900px');
+                    $("#summernote").summernote("insertNode", image[0]);
+                }
+            },
+            error: function(data) {
+                console.log(data);
+                alert(data);
+            }
+        });
+    }
+</script>
+<script>
+    function checkForm() {
+
+        if ($.trim($("#title").val()) == "") {
+            alert("제목을 입력하세요");
+            $("#title").focus();
+            return false;
+        }
+
+        if ($.trim($("#summernote").val()) == "") {
+            alert("내용을 입력하세요");
+            $("#summernote").focus();
+            return false;
+        }
+        return true;
+    }
+</script>
+
+<form name="form" method="POST" action="{{url_for('board.board_write')}}" onsubmit="return checkForm()" enctype="multipart/form-data">
+    <!-- <script>console.log("aa");</script> -->
+    <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+    <div class="form-group">
+        <label for="name">작성자</label>
+        <input class="form-control" type="text" name="name" value="{{session['name']}}" readonly>
+
+    </div>
+    <div class="form-group">
+        <label for="title">제목</label>
+        <input class="form-control" type="text" name="title" id="title" placeholder="제목을 입력하세요">
+    </div>
+    <div class="form-group">
+        <label for="contents">내용1</label>
+        <textarea rows="8" class="form-control" name="contents" id="summernote" placeholder="내용을 입력하세요"></textarea>
+    </div>
+    <div class="custom-file">
+        <label class="custom-file-label" for="customFile">파일선택</label>
+        <input class="custom-file-input" id="customFile" type="file" name="attachfile">
+    </div>
+    <div>&nbsp;</div>
+    <div class="text-center">
+        <input class="btn btn-primary btn-sm" type="submit" value="작성하기" />
+    </div>
+</form>
+<script>
+    // Add the following code if you want the name of the file appear on select
+    $(".custom-file-input").on("change", function() {
+      var fileName = $(this).val().split("\\").pop();
+      $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+</script>
+
+{% endblock %}

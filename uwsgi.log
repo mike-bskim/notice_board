@@ -1,0 +1,347 @@
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sun Mar 28 13:26:13 2021] ***
+compiled with version: 9.3.0 on 28 March 2021 13:22:32
+os: Linux-5.4.0-1040-gcp #43-Ubuntu SMP Fri Mar 19 17:49:48 UTC 2021
+nodename: myweb-server
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/mike_bskim/myweb-py
+detected binary path: /home/mike_bskim/myweb-py/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 3889
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address myweb.sock fd 3
+Python version: 3.8.5 (default, Jan 27 2021, 15:41:15)  [GCC 9.3.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x559730615280
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+Traceback (most recent call last):
+  File "./run.py", line 1, in <module>
+    from main import app
+  File "./main/__init__.py", line 9, in <module>
+    from bson.objectid import ObjectId
+ModuleNotFoundError: No module named 'bson'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 9096)
+spawned uWSGI worker 1 (pid: 9098, cores: 1)
+spawned uWSGI worker 2 (pid: 9099, cores: 1)
+spawned uWSGI worker 3 (pid: 9100, cores: 1)
+spawned uWSGI worker 4 (pid: 9101, cores: 1)
+spawned uWSGI worker 5 (pid: 9102, cores: 1)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket myweb.sock removed.
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sun Mar 28 13:46:46 2021] ***
+compiled with version: 9.3.0 on 28 March 2021 13:22:32
+os: Linux-5.4.0-1040-gcp #43-Ubuntu SMP Fri Mar 19 17:49:48 UTC 2021
+nodename: myweb-server
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/mike_bskim/myweb-py
+detected binary path: /home/mike_bskim/myweb-py/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 3889
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address myweb.sock fd 3
+Python version: 3.8.5 (default, Jan 27 2021, 15:41:15)  [GCC 9.3.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5598b80635b0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5598b80635b0 pid: 10389 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 10389)
+spawned uWSGI worker 1 (pid: 10401, cores: 1)
+spawned uWSGI worker 2 (pid: 10402, cores: 1)
+spawned uWSGI worker 3 (pid: 10403, cores: 1)
+spawned uWSGI worker 4 (pid: 10404, cores: 1)
+spawned uWSGI worker 5 (pid: 10405, cores: 1)
+SIGINT/SIGQUIT received...killing workers...
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 1 buried after 2 seconds
+worker 2 buried after 2 seconds
+worker 3 buried after 2 seconds
+goodbye to uWSGI.
+VACUUM: unix socket myweb.sock removed.
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sun Mar 28 13:50:38 2021] ***
+compiled with version: 9.3.0 on 28 March 2021 13:22:32
+os: Linux-5.4.0-1040-gcp #43-Ubuntu SMP Fri Mar 19 17:49:48 UTC 2021
+nodename: myweb-server
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/mike_bskim/myweb-py
+detected binary path: /home/mike_bskim/myweb-py/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 3889
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address myweb.sock fd 3
+Python version: 3.8.5 (default, Jan 27 2021, 15:41:15)  [GCC 9.3.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x555e48fda5b0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x555e48fda5b0 pid: 11875 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 11875)
+spawned uWSGI worker 1 (pid: 11894, cores: 1)
+spawned uWSGI worker 2 (pid: 11895, cores: 1)
+spawned uWSGI worker 3 (pid: 11896, cores: 1)
+spawned uWSGI worker 4 (pid: 11897, cores: 1)
+spawned uWSGI worker 5 (pid: 11898, cores: 1)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 2 seconds
+worker 2 buried after 2 seconds
+worker 3 buried after 2 seconds
+worker 4 buried after 2 seconds
+worker 5 buried after 2 seconds
+goodbye to uWSGI.
+VACUUM: unix socket myweb.sock removed.
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sun Mar 28 13:56:13 2021] ***
+compiled with version: 9.3.0 on 28 March 2021 13:22:32
+os: Linux-5.4.0-1040-gcp #43-Ubuntu SMP Fri Mar 19 17:49:48 UTC 2021
+nodename: myweb-server
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/mike_bskim/myweb-py
+detected binary path: /home/mike_bskim/myweb-py/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 3889
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address myweb.sock fd 3
+Python version: 3.8.5 (default, Jan 27 2021, 15:41:15)  [GCC 9.3.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55c5d172e5b0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x55c5d172e5b0 pid: 490 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 490)
+spawned uWSGI worker 1 (pid: 698, cores: 1)
+spawned uWSGI worker 2 (pid: 699, cores: 1)
+spawned uWSGI worker 3 (pid: 700, cores: 1)
+spawned uWSGI worker 4 (pid: 701, cores: 1)
+spawned uWSGI worker 5 (pid: 702, cores: 1)
+[pid: 700|app: 0|req: 1/1] 5.102.6.34 () {44 vars in 1101 bytes} [Sun Mar 28 14:01:00 2021] GET /naver/ => generated 11257 bytes in 1027 msecs (HTTP/1.1 200) 4 headers in 377 bytes (1 switches on core 0)
+[pid: 698|app: 0|req: 1/2] 5.102.6.34 () {42 vars in 981 bytes} [Sun Mar 28 14:01:01 2021] GET /static/jquery-3.5.1.js => generated 287630 bytes in 20 msecs via sendfile() (HTTP/1.1 200) 8 headers in 582 bytes (0 switches on core 0)
+[pid: 700|app: 0|req: 2/3] 5.102.6.34 () {42 vars in 1048 bytes} [Sun Mar 28 14:01:01 2021] GET /static/summernote-0.8.18-dist/summernote.min.css => generated 19266 bytes in 6 msecs via sendfile() (HTTP/1.1 200) 8 headers in 568 bytes (0 switches on core 0)
+[pid: 702|app: 0|req: 1/4] 5.102.6.34 () {42 vars in 1031 bytes} [Sun Mar 28 14:01:01 2021] GET /static/summernote-0.8.18-dist/summernote.min.js => generated 151092 bytes in 18 msecs via sendfile() (HTTP/1.1 200) 8 headers in 584 bytes (0 switches on core 0)
+[pid: 698|app: 0|req: 2/5] 5.102.6.34 () {42 vars in 980 bytes} [Sun Mar 28 14:01:02 2021] GET /static/run.css => generated 0 bytes in 2 msecs (HTTP/1.1 200) 8 headers in 559 bytes (0 switches on core 0)
+[pid: 698|app: 0|req: 3/6] 5.102.6.34 () {46 vars in 1073 bytes} [Sun Mar 28 14:01:03 2021] GET /favicon.ico => generated 232 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 368 bytes (1 switches on core 0)
+[pid: 700|app: 0|req: 3/7] 5.102.6.34 () {44 vars in 1147 bytes} [Sun Mar 28 14:01:12 2021] GET /naver/getShops?keyword=%27%EC%82%B0%EB%A6%AC%EC%98%A4%20%EC%95%84%EB%AF%B8%EB%B3%B4%27 => generated 1869 bytes in 377 msecs (HTTP/1.1 200) 3 headers in 369 bytes (1 switches on core 0)
+[pid: 698|app: 0|req: 4/8] 5.102.6.34 () {44 vars in 1147 bytes} [Sun Mar 28 14:01:12 2021] GET /naver/getBlogs?keyword=%27%EC%82%B0%EB%A6%AC%EC%98%A4%20%EC%95%84%EB%AF%B8%EB%B3%B4%27 => generated 1694 bytes in 407 msecs (HTTP/1.1 200) 3 headers in 369 bytes (1 switches on core 0)
+[pid: 702|app: 0|req: 2/9] 5.102.6.34 () {44 vars in 1143 bytes} [Sun Mar 28 14:01:12 2021] GET /naver/relatedKeywords?keyword=%EC%82%B0%EB%A6%AC%EC%98%A4%EC%95%84%EB%AF%B8%EB%B3%B4 => generated 522 bytes in 8951 msecs (HTTP/1.1 200) 3 headers in 368 bytes (1 switches on core 0)
+[pid: 700|app: 0|req: 4/10] 5.102.6.34 () {40 vars in 785 bytes} [Sun Mar 28 14:03:54 2021] GET /naver => generated 267 bytes in 3 msecs (HTTP/1.1 308) 3 headers in 138 bytes (1 switches on core 0)
+[pid: 700|app: 0|req: 5/11] 5.102.6.34 () {40 vars in 787 bytes} [Sun Mar 28 14:03:55 2021] GET /naver/ => generated 11232 bytes in 783 msecs (HTTP/1.1 200) 4 headers in 247 bytes (1 switches on core 0)
+[pid: 698|app: 0|req: 5/12] 5.102.6.34 () {42 vars in 832 bytes} [Sun Mar 28 14:03:57 2021] GET /static/jquery-3.5.1.js => generated 287630 bytes in 3 msecs via sendfile() (HTTP/1.1 200) 7 headers in 301 bytes (0 switches on core 0)
+[pid: 700|app: 0|req: 6/13] 5.102.6.34 () {42 vars in 882 bytes} [Sun Mar 28 14:03:57 2021] GET /static/summernote-0.8.18-dist/summernote.min.js => generated 151092 bytes in 3 msecs via sendfile() (HTTP/1.1 200) 7 headers in 303 bytes (0 switches on core 0)
+[pid: 699|app: 0|req: 1/14] 5.102.6.34 () {42 vars in 899 bytes} [Sun Mar 28 14:03:57 2021] GET /static/summernote-0.8.18-dist/summernote.min.css => generated 19266 bytes in 11 msecs via sendfile() (HTTP/1.1 200) 7 headers in 287 bytes (0 switches on core 0)
+[pid: 700|app: 0|req: 7/15] 5.102.6.34 () {42 vars in 831 bytes} [Sun Mar 28 14:03:57 2021] GET /static/run.css => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 278 bytes (0 switches on core 0)
+[pid: 698|app: 0|req: 6/16] 5.102.6.34 () {42 vars in 871 bytes} [Sun Mar 28 14:04:00 2021] GET /favicon.ico => generated 232 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 698|app: 0|req: 7/17] 5.102.6.34 () {44 vars in 998 bytes} [Sun Mar 28 14:04:05 2021] GET /naver/getBlogs?keyword=%27%EC%82%B0%EB%A6%AC%EC%98%A4%20%EC%95%84%EB%AF%B8%EB%B3%B4%27 => generated 1694 bytes in 310 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 701|app: 0|req: 1/18] 5.102.6.34 () {44 vars in 998 bytes} [Sun Mar 28 14:04:05 2021] GET /naver/getShops?keyword=%27%EC%82%B0%EB%A6%AC%EC%98%A4%20%EC%95%84%EB%AF%B8%EB%B3%B4%27 => generated 1869 bytes in 352 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 702|app: 0|req: 3/19] 5.102.6.34 () {44 vars in 994 bytes} [Sun Mar 28 14:04:05 2021] GET /naver/relatedKeywords?keyword=%EC%82%B0%EB%A6%AC%EC%98%A4%EC%95%84%EB%AF%B8%EB%B3%B4 => generated 522 bytes in 8174 msecs (HTTP/1.1 200) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 700|app: 0|req: 8/20] 5.102.6.34 () {44 vars in 938 bytes} [Sun Mar 28 14:04:47 2021] GET /naver/getBlogs?keyword=%27%EB%A9%B4%EB%8F%84%EA%B8%B0%27 => generated 1469 bytes in 435 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 702|app: 0|req: 4/21] 5.102.6.34 () {44 vars in 938 bytes} [Sun Mar 28 14:04:47 2021] GET /naver/getShops?keyword=%27%EB%A9%B4%EB%8F%84%EA%B8%B0%27 => generated 1119 bytes in 457 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 698|app: 0|req: 8/22] 5.102.6.34 () {44 vars in 940 bytes} [Sun Mar 28 14:04:47 2021] GET /naver/relatedKeywords?keyword=%EB%A9%B4%EB%8F%84%EA%B8%B0 => generated 1061 bytes in 10019 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 702|app: 0|req: 5/23] 5.102.6.34 () {44 vars in 952 bytes} [Sun Mar 28 14:05:20 2021] GET /naver/ => generated 11232 bytes in 889 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 2 buried after 1 seconds
+worker 1 buried after 2 seconds
+worker 3 buried after 2 seconds
+worker 4 buried after 2 seconds
+worker 5 buried after 2 seconds
+goodbye to uWSGI.
+VACUUM: unix socket myweb.sock removed.
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sun Mar 28 14:06:48 2021] ***
+compiled with version: 9.3.0 on 28 March 2021 13:22:32
+os: Linux-5.4.0-1040-gcp #43-Ubuntu SMP Fri Mar 19 17:49:48 UTC 2021
+nodename: myweb-server
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/mike_bskim/myweb-py
+detected binary path: /home/mike_bskim/myweb-py/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 3889
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address myweb.sock fd 3
+Python version: 3.8.5 (default, Jan 27 2021, 15:41:15)  [GCC 9.3.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55f4656c55b0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55f4656c55b0 pid: 3643 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3643)
+spawned uWSGI worker 1 (pid: 3663, cores: 1)
+spawned uWSGI worker 2 (pid: 3664, cores: 1)
+spawned uWSGI worker 3 (pid: 3665, cores: 1)
+spawned uWSGI worker 4 (pid: 3666, cores: 1)
+spawned uWSGI worker 5 (pid: 3667, cores: 1)
+[pid: 3667|app: 0|req: 1/1] 5.102.6.34 () {42 vars in 1070 bytes} [Sun Mar 28 14:10:07 2021] GET /naver/ => generated 11257 bytes in 1078 msecs (HTTP/1.1 200) 4 headers in 377 bytes (1 switches on core 0)
+[pid: 3666|app: 0|req: 1/2] 5.102.6.34 () {44 vars in 1201 bytes} [Sun Mar 28 14:10:11 2021] GET /naver/getBlogs?keyword=%27%EB%82%98%EC%9D%B4%ED%82%A4%20%EB%8D%B0%EC%9D%B4%EB%B8%8C%EB%A0%88%EC%9D%B4%ED%81%AC%27 => generated 1622 bytes in 388 msecs (HTTP/1.1 200) 3 headers in 369 bytes (1 switches on core 0)
+[pid: 3665|app: 0|req: 1/3] 5.102.6.34 () {44 vars in 1201 bytes} [Sun Mar 28 14:10:11 2021] GET /naver/getShops?keyword=%27%EB%82%98%EC%9D%B4%ED%82%A4%20%EB%8D%B0%EC%9D%B4%EB%B8%8C%EB%A0%88%EC%9D%B4%ED%81%AC%27 => generated 1606 bytes in 407 msecs (HTTP/1.1 200) 3 headers in 369 bytes (1 switches on core 0)
+[pid: 3664|app: 0|req: 1/4] 5.102.6.34 () {44 vars in 1197 bytes} [Sun Mar 28 14:10:11 2021] GET /naver/relatedKeywords?keyword=%EB%82%98%EC%9D%B4%ED%82%A4%EB%8D%B0%EC%9D%B4%EB%B8%8C%EB%A0%88%EC%9D%B4%ED%81%AC => generated 1208 bytes in 9477 msecs (HTTP/1.1 200) 3 headers in 369 bytes (1 switches on core 0)
+[pid: 3667|app: 0|req: 2/5] 95.74.101.19 () {40 vars in 683 bytes} [Sun Mar 28 14:34:36 2021] GET /naver/ => generated 11232 bytes in 973 msecs (HTTP/1.1 200) 4 headers in 247 bytes (1 switches on core 0)
+[pid: 3666|app: 0|req: 2/6] 95.74.101.19 () {42 vars in 800 bytes} [Sun Mar 28 14:34:38 2021] GET /static/jquery-3.5.1.js => generated 287630 bytes in 14 msecs via sendfile() (HTTP/1.1 200) 7 headers in 301 bytes (0 switches on core 0)
+[pid: 3663|app: 0|req: 1/7] 95.74.101.19 () {42 vars in 867 bytes} [Sun Mar 28 14:34:38 2021] GET /static/summernote-0.8.18-dist/summernote.min.css => generated 19266 bytes in 9 msecs via sendfile() (HTTP/1.1 200) 7 headers in 287 bytes (0 switches on core 0)
+[pid: 3665|app: 0|req: 2/8] 95.74.101.19 () {42 vars in 850 bytes} [Sun Mar 28 14:34:38 2021] GET /static/summernote-0.8.18-dist/summernote.min.js => generated 151092 bytes in 8 msecs via sendfile() (HTTP/1.1 200) 7 headers in 303 bytes (0 switches on core 0)
+[pid: 3665|app: 0|req: 3/9] 95.74.101.19 () {42 vars in 799 bytes} [Sun Mar 28 14:34:38 2021] GET /static/run.css => generated 0 bytes in 1 msecs (HTTP/1.1 200) 7 headers in 278 bytes (0 switches on core 0)
+[pid: 3667|app: 0|req: 3/10] 95.74.101.19 () {42 vars in 778 bytes} [Sun Mar 28 14:34:40 2021] GET /favicon.ico => generated 232 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 3664|app: 0|req: 2/11] 95.74.101.19 () {44 vars in 906 bytes} [Sun Mar 28 14:34:44 2021] GET /naver/getShops?keyword=%27%EB%A9%B4%EB%8F%84%EA%B8%B0%27 => generated 1119 bytes in 366 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3665|app: 0|req: 4/12] 95.74.101.19 () {44 vars in 906 bytes} [Sun Mar 28 14:34:44 2021] GET /naver/getBlogs?keyword=%27%EB%A9%B4%EB%8F%84%EA%B8%B0%27 => generated 1469 bytes in 378 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3667|app: 0|req: 4/13] 95.74.101.19 () {44 vars in 908 bytes} [Sun Mar 28 14:34:44 2021] GET /naver/relatedKeywords?keyword=%EB%A9%B4%EB%8F%84%EA%B8%B0 => generated 1061 bytes in 10064 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3666|app: 0|req: 3/14] 61.129.6.251 () {36 vars in 644 bytes} [Sun Mar 28 14:35:09 2021] GET /naver => generated 267 bytes in 2 msecs (HTTP/1.1 308) 3 headers in 138 bytes (1 switches on core 0)
+[pid: 3666|app: 0|req: 4/15] 61.129.6.251 () {38 vars in 691 bytes} [Sun Mar 28 14:35:10 2021] GET /naver/ => generated 11232 bytes in 874 msecs (HTTP/1.1 200) 4 headers in 247 bytes (1 switches on core 0)
+[pid: 3666|app: 0|req: 5/16] 61.129.6.251 () {38 vars in 722 bytes} [Sun Mar 28 14:35:12 2021] GET /static/jquery-3.5.1.js => generated 287630 bytes in 2 msecs via sendfile() (HTTP/1.1 200) 7 headers in 301 bytes (0 switches on core 0)
+[pid: 3666|app: 0|req: 6/17] 61.129.6.251 () {38 vars in 728 bytes} [Sun Mar 28 14:35:25 2021] GET /static/summernote-0.8.18-dist/summernote.min.js => generated 151092 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 7 headers in 303 bytes (0 switches on core 0)
+[pid: 3663|app: 0|req: 2/18] 95.74.101.19 () {44 vars in 1020 bytes} [Sun Mar 28 14:38:37 2021] GET /naver/getBlogs?keyword=%27%EB%82%98%EC%9D%B4%ED%82%A4%20%EB%8D%B0%EC%9D%B4%EB%B8%8C%EB%A0%88%EC%9D%B4%ED%81%AC%27 => generated 1622 bytes in 370 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3664|app: 0|req: 3/19] 95.74.101.19 () {44 vars in 1020 bytes} [Sun Mar 28 14:38:37 2021] GET /naver/getShops?keyword=%27%EB%82%98%EC%9D%B4%ED%82%A4%20%EB%8D%B0%EC%9D%B4%EB%B8%8C%EB%A0%88%EC%9D%B4%ED%81%AC%27 => generated 1606 bytes in 382 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3666|app: 0|req: 7/20] 95.74.101.19 () {44 vars in 1016 bytes} [Sun Mar 28 14:38:37 2021] GET /naver/relatedKeywords?keyword=%EB%82%98%EC%9D%B4%ED%82%A4%EB%8D%B0%EC%9D%B4%EB%B8%8C%EB%A0%88%EC%9D%B4%ED%81%AC => generated 1208 bytes in 9452 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3664|app: 0|req: 4/21] 95.74.101.19 () {44 vars in 1002 bytes} [Sun Mar 28 14:38:47 2021] GET /naver/getShops?keyword=%27%EB%AA%AC%EC%8A%A4%ED%84%B0%ED%97%8C%ED%84%B0%20%EB%9D%BC%EC%9D%B4%EC%A6%88%27 => generated 1618 bytes in 323 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3667|app: 0|req: 5/22] 95.74.101.19 () {44 vars in 1002 bytes} [Sun Mar 28 14:38:47 2021] GET /naver/getBlogs?keyword=%27%EB%AA%AC%EC%8A%A4%ED%84%B0%ED%97%8C%ED%84%B0%20%EB%9D%BC%EC%9D%B4%EC%A6%88%27 => generated 1735 bytes in 354 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3665|app: 0|req: 5/23] 95.74.101.19 () {44 vars in 998 bytes} [Sun Mar 28 14:38:47 2021] GET /naver/relatedKeywords?keyword=%EB%AA%AC%EC%8A%A4%ED%84%B0%ED%97%8C%ED%84%B0%EB%9D%BC%EC%9D%B4%EC%A6%88 => generated 114 bytes in 1043 msecs (HTTP/1.1 200) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 3667|app: 0|req: 6/24] 95.74.101.19 () {44 vars in 1002 bytes} [Sun Mar 28 14:39:02 2021] GET /naver/getBlogs?keyword=%27%EB%AA%AC%EC%8A%A4%ED%84%B0%ED%97%8C%ED%84%B0%20%EB%9D%BC%EC%9D%B4%EC%A6%88%27 => generated 1735 bytes in 275 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3664|app: 0|req: 5/25] 95.74.101.19 () {44 vars in 1002 bytes} [Sun Mar 28 14:39:02 2021] GET /naver/getShops?keyword=%27%EB%AA%AC%EC%8A%A4%ED%84%B0%ED%97%8C%ED%84%B0%20%EB%9D%BC%EC%9D%B4%EC%A6%88%27 => generated 1618 bytes in 339 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3665|app: 0|req: 6/26] 95.74.101.19 () {44 vars in 998 bytes} [Sun Mar 28 14:39:02 2021] GET /naver/relatedKeywords?keyword=%EB%AA%AC%EC%8A%A4%ED%84%B0%ED%97%8C%ED%84%B0%EB%9D%BC%EC%9D%B4%EC%A6%88 => generated 114 bytes in 922 msecs (HTTP/1.1 200) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 3664|app: 0|req: 6/27] 95.74.101.19 () {44 vars in 948 bytes} [Sun Mar 28 14:39:09 2021] GET /naver/getBlogs?keyword=%27%EC%97%90%EC%96%B4%ED%8C%9F%20%ED%94%84%EB%A1%9C%27 => generated 1610 bytes in 363 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3663|app: 0|req: 3/28] 95.74.101.19 () {44 vars in 948 bytes} [Sun Mar 28 14:39:09 2021] GET /naver/getShops?keyword=%27%EC%97%90%EC%96%B4%ED%8C%9F%20%ED%94%84%EB%A1%9C%27 => generated 1763 bytes in 380 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3667|app: 0|req: 7/29] 95.74.101.19 () {44 vars in 944 bytes} [Sun Mar 28 14:39:09 2021] GET /naver/relatedKeywords?keyword=%EC%97%90%EC%96%B4%ED%8C%9F%ED%94%84%EB%A1%9C => generated 110 bytes in 953 msecs (HTTP/1.1 200) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 3666|app: 0|req: 8/30] 5.102.6.34 () {40 vars in 714 bytes} [Sun Mar 28 14:48:06 2021] GET /naver/ => generated 11232 bytes in 1027 msecs (HTTP/1.1 200) 4 headers in 247 bytes (1 switches on core 0)
+[pid: 3665|app: 0|req: 7/31] 5.102.6.34 () {42 vars in 831 bytes} [Sun Mar 28 14:48:07 2021] GET /static/jquery-3.5.1.js => generated 287630 bytes in 3 msecs via sendfile() (HTTP/1.1 200) 7 headers in 301 bytes (0 switches on core 0)
+[pid: 3664|app: 0|req: 7/32] 5.102.6.34 () {42 vars in 898 bytes} [Sun Mar 28 14:48:08 2021] GET /static/summernote-0.8.18-dist/summernote.min.css => generated 19266 bytes in 4 msecs via sendfile() (HTTP/1.1 200) 7 headers in 287 bytes (0 switches on core 0)
+[pid: 3667|app: 0|req: 8/33] 5.102.6.34 () {42 vars in 830 bytes} [Sun Mar 28 14:48:08 2021] GET /static/run.css => generated 0 bytes in 2 msecs (HTTP/1.1 200) 7 headers in 278 bytes (0 switches on core 0)
+[pid: 3663|app: 0|req: 4/34] 5.102.6.34 () {42 vars in 881 bytes} [Sun Mar 28 14:48:08 2021] GET /static/summernote-0.8.18-dist/summernote.min.js => generated 151092 bytes in 3 msecs via sendfile() (HTTP/1.1 200) 7 headers in 303 bytes (0 switches on core 0)
+[pid: 3666|app: 0|req: 9/35] 5.102.6.34 () {44 vars in 943 bytes} [Sun Mar 28 14:48:31 2021] GET /naver/getShops?keyword=%27%EA%B3%A0%EA%B5%AC%EB%A7%88%20%27 => generated 1799 bytes in 439 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3667|app: 0|req: 9/36] 5.102.6.34 () {44 vars in 943 bytes} [Sun Mar 28 14:48:31 2021] GET /naver/getBlogs?keyword=%27%EA%B3%A0%EA%B5%AC%EB%A7%88%20%27 => generated 1665 bytes in 447 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+Sun Mar 28 14:48:40 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /naver/relatedKeywords?keyword=%EA%B3%A0%EA%B5%AC%EB%A7%88 (ip 5.102.6.34) !!!
+Sun Mar 28 14:48:40 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET /naver/relatedKeywords?keyword=%EA%B3%A0%EA%B5%AC%EB%A7%88 (5.102.6.34)
+OSError: write error
+[pid: 3665|app: 0|req: 8/37] 5.102.6.34 () {44 vars in 939 bytes} [Sun Mar 28 14:48:31 2021] GET /naver/relatedKeywords?keyword=%EA%B3%A0%EA%B5%AC%EB%A7%88 => generated 0 bytes in 9405 msecs (HTTP/1.1 200) 2 headers in 0 bytes (0 switches on core 0)
+[pid: 3664|app: 0|req: 8/38] 95.74.101.19 () {42 vars in 817 bytes} [Sun Mar 28 14:48:43 2021] GET /naver/ => generated 11232 bytes in 851 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 3666|app: 0|req: 10/39] 95.74.101.19 () {44 vars in 906 bytes} [Sun Mar 28 14:48:48 2021] GET /naver/getBlogs?keyword=%27%EB%A9%B4%EB%8F%84%EA%B8%B0%27 => generated 1469 bytes in 350 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3667|app: 0|req: 10/40] 95.74.101.19 () {44 vars in 906 bytes} [Sun Mar 28 14:48:48 2021] GET /naver/getShops?keyword=%27%EB%A9%B4%EB%8F%84%EA%B8%B0%27 => generated 1119 bytes in 394 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3665|app: 0|req: 9/41] 95.74.101.19 () {44 vars in 908 bytes} [Sun Mar 28 14:48:48 2021] GET /naver/relatedKeywords?keyword=%EB%A9%B4%EB%8F%84%EA%B8%B0 => generated 1061 bytes in 9950 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+Sun Mar 28 14:49:05 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /naver/ (ip 5.102.6.34) !!!
+Sun Mar 28 14:49:05 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET /naver/ (5.102.6.34)
+OSError: write error
+[pid: 3667|app: 0|req: 11/42] 5.102.6.34 () {42 vars in 848 bytes} [Sun Mar 28 14:49:04 2021] GET /naver/ => generated 0 bytes in 809 msecs (HTTP/1.1 200) 3 headers in 0 bytes (0 switches on core 0)
+[pid: 3665|app: 0|req: 10/43] 5.102.6.34 () {42 vars in 848 bytes} [Sun Mar 28 14:49:05 2021] GET /naver/ => generated 11232 bytes in 806 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 3667|app: 0|req: 12/44] 5.102.6.34 () {44 vars in 943 bytes} [Sun Mar 28 14:49:15 2021] GET /naver/getBlogs?keyword=%27%EA%B3%A0%EA%B5%AC%EB%A7%88%20%27 => generated 1665 bytes in 275 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3666|app: 0|req: 11/45] 5.102.6.34 () {44 vars in 943 bytes} [Sun Mar 28 14:49:15 2021] GET /naver/getShops?keyword=%27%EA%B3%A0%EA%B5%AC%EB%A7%88%20%27 => generated 1799 bytes in 267 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+Sun Mar 28 14:49:23 2021 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /naver/relatedKeywords?keyword=%EA%B3%A0%EA%B5%AC%EB%A7%88 (ip 5.102.6.34) !!!
+Sun Mar 28 14:49:23 2021 - uwsgi_response_writev_headers_and_body_do(): Broken pipe [core/writer.c line 306] during GET /naver/relatedKeywords?keyword=%EA%B3%A0%EA%B5%AC%EB%A7%88 (5.102.6.34)
+OSError: write error
+[pid: 3667|app: 0|req: 13/46] 5.102.6.34 () {44 vars in 939 bytes} [Sun Mar 28 14:49:15 2021] GET /naver/relatedKeywords?keyword=%EA%B3%A0%EA%B5%AC%EB%A7%88 => generated 0 bytes in 8388 msecs (HTTP/1.1 200) 2 headers in 0 bytes (0 switches on core 0)
+[pid: 3666|app: 0|req: 12/47] 5.102.6.34 () {42 vars in 848 bytes} [Sun Mar 28 14:50:13 2021] GET /naver/ => generated 11232 bytes in 803 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 3665|app: 0|req: 11/48] 5.102.6.34 () {44 vars in 937 bytes} [Sun Mar 28 14:50:21 2021] GET /naver/getShops?keyword=%27%EA%B3%A0%EA%B5%AC%EB%A7%88%27 => generated 1799 bytes in 332 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3667|app: 0|req: 14/49] 5.102.6.34 () {44 vars in 937 bytes} [Sun Mar 28 14:50:21 2021] GET /naver/getBlogs?keyword=%27%EA%B3%A0%EA%B5%AC%EB%A7%88%27 => generated 1665 bytes in 388 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3664|app: 0|req: 9/50] 5.102.6.34 () {44 vars in 939 bytes} [Sun Mar 28 14:50:21 2021] GET /naver/relatedKeywords?keyword=%EA%B3%A0%EA%B5%AC%EB%A7%88 => generated 1188 bytes in 8468 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3667|app: 0|req: 15/51] 95.74.101.19 () {42 vars in 817 bytes} [Sun Mar 28 14:52:04 2021] GET /naver/ => generated 11232 bytes in 909 msecs (HTTP/1.1 200) 3 headers in 96 bytes (1 switches on core 0)
+[pid: 3665|app: 0|req: 12/52] 95.74.101.19 () {44 vars in 906 bytes} [Sun Mar 28 14:52:08 2021] GET /naver/getShops?keyword=%27%EB%A9%B4%EB%8F%84%EA%B8%B0%27 => generated 1119 bytes in 291 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3664|app: 0|req: 10/53] 95.74.101.19 () {44 vars in 906 bytes} [Sun Mar 28 14:52:08 2021] GET /naver/getBlogs?keyword=%27%EB%A9%B4%EB%8F%84%EA%B8%B0%27 => generated 1469 bytes in 355 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3666|app: 0|req: 13/54] 95.74.101.19 () {44 vars in 908 bytes} [Sun Mar 28 14:52:08 2021] GET /naver/relatedKeywords?keyword=%EB%A9%B4%EB%8F%84%EA%B8%B0 => generated 1061 bytes in 9281 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3666|app: 0|req: 14/55] 95.74.101.19 () {44 vars in 906 bytes} [Sun Mar 28 14:53:17 2021] GET /naver/getShops?keyword=%27%EA%B3%A0%EA%B5%AC%EB%A7%88%27 => generated 1799 bytes in 277 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3667|app: 0|req: 16/56] 95.74.101.19 () {44 vars in 906 bytes} [Sun Mar 28 14:53:17 2021] GET /naver/getBlogs?keyword=%27%EA%B3%A0%EA%B5%AC%EB%A7%88%27 => generated 1665 bytes in 317 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 3665|app: 0|req: 13/57] 95.74.101.19 () {44 vars in 908 bytes} [Sun Mar 28 14:53:17 2021] GET /naver/relatedKeywords?keyword=%EA%B3%A0%EA%B5%AC%EB%A7%88 => generated 1188 bytes in 8313 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket myweb.sock removed.
+*** Starting uWSGI 2.0.19.1 (64bit) on [Sun Mar 28 14:55:53 2021] ***
+compiled with version: 9.3.0 on 28 March 2021 13:22:32
+os: Linux-5.4.0-1040-gcp #43-Ubuntu SMP Fri Mar 19 17:49:48 UTC 2021
+nodename: myweb-server
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /home/mike_bskim/myweb-py
+detected binary path: /home/mike_bskim/myweb-py/venv/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+your processes number limit is 3889
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address myweb.sock fd 3
+Python version: 3.8.5 (default, Jan 27 2021, 15:41:15)  [GCC 9.3.0]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5590ecedd5b0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x5590ecedd5b0 pid: 492 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 492)
+spawned uWSGI worker 1 (pid: 719, cores: 1)
+spawned uWSGI worker 2 (pid: 720, cores: 1)
+spawned uWSGI worker 3 (pid: 721, cores: 1)
+spawned uWSGI worker 4 (pid: 722, cores: 1)
+spawned uWSGI worker 5 (pid: 724, cores: 1)
+[pid: 719|app: 0|req: 1/1] 36.27.208.157 () {36 vars in 452 bytes} [Sun Mar 28 19:02:33 2021] POST /_search?pretty => generated 232 bytes in 55 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 720|app: 0|req: 1/2] 36.27.208.157 () {40 vars in 655 bytes} [Sun Mar 28 19:02:34 2021] POST /_search?source => generated 232 bytes in 6 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 720|app: 0|req: 2/3] 5.102.6.34 () {44 vars in 1052 bytes} [Sun Mar 28 19:26:05 2021] GET /naver/getBlogs?keyword=%27%EB%82%98%EC%9D%B4%ED%82%A4%20%EB%8D%B0%EC%9D%B4%EB%B8%8C%EB%A0%88%EC%9D%B4%ED%81%AC%27 => generated 1584 bytes in 443 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 719|app: 0|req: 2/4] 5.102.6.34 () {44 vars in 1052 bytes} [Sun Mar 28 19:26:05 2021] GET /naver/getShops?keyword=%27%EB%82%98%EC%9D%B4%ED%82%A4%20%EB%8D%B0%EC%9D%B4%EB%B8%8C%EB%A0%88%EC%9D%B4%ED%81%AC%27 => generated 1606 bytes in 478 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 724|app: 0|req: 1/5] 5.102.6.34 () {44 vars in 1048 bytes} [Sun Mar 28 19:26:05 2021] GET /naver/relatedKeywords?keyword=%EB%82%98%EC%9D%B4%ED%82%A4%EB%8D%B0%EC%9D%B4%EB%B8%8C%EB%A0%88%EC%9D%B4%ED%81%AC => generated 1208 bytes in 9224 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 719|app: 0|req: 3/6] 5.102.6.34 () {44 vars in 1010 bytes} [Sun Mar 28 19:27:31 2021] GET /naver/getBlogs?keyword=%27%EB%82%98%EC%9D%B4%ED%82%A4%EB%B0%94%EB%9E%8C%EB%A7%89%EC%9D%B4%27 => generated 1739 bytes in 338 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 724|app: 0|req: 2/7] 5.102.6.34 () {44 vars in 1010 bytes} [Sun Mar 28 19:27:31 2021] GET /naver/getShops?keyword=%27%EB%82%98%EC%9D%B4%ED%82%A4%EB%B0%94%EB%9E%8C%EB%A7%89%EC%9D%B4%27 => generated 1704 bytes in 366 msecs (HTTP/1.1 200) 2 headers in 88 bytes (2 switches on core 0)
+[pid: 721|app: 0|req: 1/8] 5.102.6.34 () {44 vars in 1012 bytes} [Sun Mar 28 19:27:31 2021] GET /naver/relatedKeywords?keyword=%EB%82%98%EC%9D%B4%ED%82%A4%EB%B0%94%EB%9E%8C%EB%A7%89%EC%9D%B4 => generated 1120 bytes in 9141 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 720|app: 0|req: 3/9] 5.102.6.34 () {44 vars in 920 bytes} [Sun Mar 28 19:32:07 2021] GET /naver/getBlogs?keyword=%27%EC%83%9D%ED%99%94%27 => generated 1582 bytes in 349 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 719|app: 0|req: 4/10] 5.102.6.34 () {44 vars in 920 bytes} [Sun Mar 28 19:32:07 2021] GET /naver/getShops?keyword=%27%EC%83%9D%ED%99%94%27 => generated 1788 bytes in 389 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 724|app: 0|req: 3/11] 5.102.6.34 () {44 vars in 922 bytes} [Sun Mar 28 19:32:08 2021] GET /naver/relatedKeywords?keyword=%EC%83%9D%ED%99%94 => generated 1041 bytes in 9074 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 720|app: 0|req: 4/12] 5.102.6.34 () {44 vars in 956 bytes} [Sun Mar 28 19:32:45 2021] GET /naver/getShops?keyword=%27%EC%83%9D%ED%99%94%EB%8F%84%EB%A7%A4%27 => generated 1995 bytes in 430 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 719|app: 0|req: 5/13] 5.102.6.34 () {44 vars in 956 bytes} [Sun Mar 28 19:32:45 2021] GET /naver/getBlogs?keyword=%27%EC%83%9D%ED%99%94%EB%8F%84%EB%A7%A4%27 => generated 1729 bytes in 456 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 722|app: 0|req: 1/14] 5.102.6.34 () {44 vars in 958 bytes} [Sun Mar 28 19:32:45 2021] GET /naver/relatedKeywords?keyword=%EC%83%9D%ED%99%94%EB%8F%84%EB%A7%A4 => generated 505 bytes in 12270 msecs (HTTP/1.1 200) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 719|app: 0|req: 6/15] 209.17.97.122 () {30 vars in 395 bytes} [Sun Mar 28 21:40:32 2021] GET / => generated 232 bytes in 18 msecs (HTTP/1.0 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 720|app: 0|req: 5/16] 162.142.125.40 () {34 vars in 442 bytes} [Mon Mar 29 00:56:48 2021] GET / => generated 232 bytes in 14 msecs (HTTP/1.1 404) 2 headers in 87 bytes (2 switches on core 0)
+[pid: 719|app: 0|req: 7/17] 162.142.125.40 () {28 vars in 307 bytes} [Mon Mar 29 00:56:51 2021] GET / => generated 232 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 721|app: 0|req: 2/18] 162.142.125.40 () {34 vars in 442 bytes} [Mon Mar 29 00:56:51 2021] GET / => generated 232 bytes in 15 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 719|app: 0|req: 8/19] 192.241.221.15 () {34 vars in 393 bytes} [Mon Mar 29 01:45:43 2021] GET / => generated 232 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 719|app: 0|req: 9/20] 192.241.222.202 () {34 vars in 408 bytes} [Mon Mar 29 01:57:14 2021] GET /_search => generated 232 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 719|app: 0|req: 10/21] 74.120.14.56 () {34 vars in 440 bytes} [Mon Mar 29 02:29:24 2021] GET / => generated 232 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 721|app: 0|req: 3/22] 74.120.14.56 () {28 vars in 305 bytes} [Mon Mar 29 02:29:27 2021] GET / => generated 232 bytes in 2 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 721|app: 0|req: 4/23] 74.120.14.56 () {34 vars in 440 bytes} [Mon Mar 29 02:29:27 2021] GET / => generated 232 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 719|app: 0|req: 11/24] 192.241.219.204 () {34 vars in 410 bytes} [Mon Mar 29 05:52:56 2021] GET /_aliases => generated 232 bytes in 1 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)
+[pid: 722|app: 0|req: 2/25] 74.82.47.5 () {28 vars in 298 bytes} [Mon Mar 29 08:48:51 2021] GET / => generated 232 bytes in 26 msecs (HTTP/1.1 404) 2 headers in 87 bytes (1 switches on core 0)

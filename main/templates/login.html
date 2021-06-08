@@ -1,0 +1,58 @@
+{% extends "main.html" %}
+
+{% block contents %}
+<script>
+    function checkForm() {
+
+        var _email = document.getElementById("email");
+        var _temp = _email.value.trim();
+        _email.value = "";
+        _email.value = _temp;
+
+
+        //if ($.trim($("#email").val()) == "") {
+        if (_email.value.trim() == "") {
+            alert("이메일을 입력하세요(client)");
+//          $("#email").focus();
+            _email.focus();
+            return false;
+        }
+
+//      if(!validateEmail($("#email").val())) {
+        if(!validateEmail(_email.value.trim())) {
+            alert("이메일 유효성이 올바르지 않습니다(client).");
+//          $("#email").focus();
+            _email.focus();
+            return false;
+        }
+    
+        if ($.trim($("#pass").val()) == "") {
+            alert("비번을 입력하세요");
+            $("#pass").focus();
+            return false;
+        }
+        return true;
+    }
+</script>
+<form name="login" action="{{url_for('member.member_login')}}" method="POST" onsubmit="return checkForm()">
+    <input type="hidden" name="csrf_token" value="{{csrf_token()}}">
+    {% if next_url %}
+        <input type="hidden" name="next_url" value="{{next_url}}">
+    {% endif %}
+
+    <div class="form-group">
+        <label for="email">이메일</label>
+        <input class="form-control" type="email" name="email" id="email">
+        <!-- <td><input type="email" name="email" id="email" ></td> -->
+    </div>
+    <div class="form-group">
+        <label for="pass">비밀번호</label>
+        <input class="form-control" type="password" name="pass" id="pass">
+        <!-- <td><input type="password" name="pass" id="pass" ></td> -->
+    </div>
+    <div class="text-center">
+        <input class="btn btn-primary btn-sm" type="submit" value="Login">
+        <!-- <td colspan="2"><input type="submit" value="Login""></td> -->
+    </div>
+</form>
+{% endblock %}
